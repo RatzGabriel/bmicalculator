@@ -1,7 +1,16 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
 import "./App.css";
 import Result from "./Result";
+
+const Div = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+`;
 
 function App() {
   const [weight, setWeight] = useState(0);
@@ -27,7 +36,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <Div className="App">
       <input
         onChange={(e) => onChange(Number(e.target.value), e.target.name)}
         name="weight"
@@ -47,7 +56,7 @@ function App() {
       <button onClick={calculate}>Calculate BMI</button>
 
       <Result bmi={bmiValue} />
-    </div>
+    </Div>
   );
 }
 
