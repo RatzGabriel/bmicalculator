@@ -1,0 +1,10 @@
+* {
+  background-color: rgb(84, 118, 211);
+  color: white;
+  border: 1px solid white;
+}
+
+input {
+  padding: 1em;
+  margin: 1em;
+}

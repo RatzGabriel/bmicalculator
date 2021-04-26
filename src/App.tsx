@@ -46,7 +46,6 @@ function App() {
       />
       <button onClick={calculate}>Calculate BMI</button>
 
-      <button onClick={() => console.log(weight)}>Test</button>
       <Result bmi={bmiValue} />
     </div>
   );

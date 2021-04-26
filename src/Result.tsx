@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import * as React from "react";
 
 export interface Props {
@@ -7,9 +6,9 @@ export interface Props {
 
 const Result: React.FC<Props> = (props) => {
   if (props.bmi > 25) {
-    return <p>You are overweight</p>;
+    return <p className="red">You are overweight</p>;
   } else {
-    return <p>Your weight is ok</p>;
+    return <p className="white">Your weight is ok</p>;
   }
 };
 
