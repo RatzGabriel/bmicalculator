@@ -10,6 +10,10 @@ const Div = styled.div`
   align-items: center;
   height: 100vh;
   flex-direction: column;
+  h1 {
+    font-size: 3em;
+    letter-spacing: 0.2em;
+  }
 `;
 
 function App() {
@@ -37,19 +41,20 @@ function App() {
 
   return (
     <Div className="App">
+      <h1>Calculate your BMI</h1>
+      <h2>Your weight in kg:</h2>
       <input
         onChange={(e) => onChange(Number(e.target.value), e.target.name)}
         name="weight"
         type="number"
         pattern="[0-9]"
-        placeholder="Weight in kg"
         value={weight}
       />
+      <h2>Your height in cm:</h2>
       <input
         onChange={(e) => onChange(Number(e.target.value), e.target.name)}
         name="height"
         type="number"
-        placeholder="Height in kg"
         pattern="[0-9]"
         value={height}
       />

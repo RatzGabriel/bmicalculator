@@ -5,6 +5,9 @@ export interface Props {
 }
 
 const Result: React.FC<Props> = (props) => {
+  if (props.bmi === 0) {
+    return null;
+  }
   if (props.bmi > 25) {
     return <p className="red">You are overweight</p>;
   } else {
